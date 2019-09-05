@@ -157,9 +157,20 @@ namespace LoginForm
         #region
         private void BtnBookings_Click(object sender, EventArgs e)
         {
-            Reservations rs = new Reservations();
-            this.Hide();
-            rs.Show();
+            using(SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();               
+                string query = $"select PickupDate, PickupTime, ReturnDate, ReturnTime, VehicleName, PickupLocation from Table_Reservation Where UserID = {userID}";
+                SqlDataAdapter sda = new SqlDataAdapter(query, sqlCon);
+                DataTable dtbl = new DataTable();
+
+
+                Reservations rs = new Reservations();
+                rs.Dat_Grid_Reservation.DataSource = dtbl;
+                this.Hide();
+                rs.Show();
+                sda.Fill(dtbl);
+            }
         }
         #endregion
     }

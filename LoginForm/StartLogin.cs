@@ -18,7 +18,9 @@ namespace LoginForm
         //Conncection String variable for Database
         string connectionString = @"Data Source=(LocalDb)\LoginProject;Initial Catalog=ProLogin;Integrated Security=True";
         public string userID;
-       
+
+        // Program Start Login form Initialize Component
+        #region
         public LoginForm()
         {
             
@@ -29,11 +31,18 @@ namespace LoginForm
         {
 
         }
+        #endregion
+
+
+        // Clear textBoxes
+        #region
+
+
         //Method to Clear Login cursor Space
         void ClearLoginForm()
         {
-            textBoxUsername.Text = "";
-            textBoxPassword.Text = "";
+            textBoxUsername.Text = string.Empty; ;
+            textBoxPassword.Text = string.Empty;
 
         }
 
@@ -46,7 +55,9 @@ namespace LoginForm
             textBoxPassword.Text = string.Empty;
 
         }
+        #endregion
 
+        
         //Method To Login
         #region
         public void LoginMethod()
@@ -98,7 +109,6 @@ namespace LoginForm
         public void SignupMethod()
         {
            
-
             using (SqlConnection sqlCon = new SqlConnection(connectionString))
             {
                if (textBoxUsernameSignUp.Text == "" || textBoxPasswordSignUp.Text == "")

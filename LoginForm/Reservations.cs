@@ -15,6 +15,13 @@ namespace LoginForm
         public Reservations()
         {
             InitializeComponent();
+
+          
+        }
+
+        private void Btn_Confirm_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -55,6 +55,7 @@
             this.btn_Confirm.TabIndex = 1;
             this.btn_Confirm.Text = "Confirm";
             this.btn_Confirm.UseVisualStyleBackColor = true;
+            this.btn_Confirm.Click += new System.EventHandler(this.Btn_Confirm_Click);
             // 
             // btn_delete
             // 
@@ -102,7 +103,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView Dat_Grid_Reservation;
+        public System.Windows.Forms.DataGridView Dat_Grid_Reservation;
         private System.Windows.Forms.Button btn_Confirm;
         private System.Windows.Forms.Button btn_delete;
         private System.Windows.Forms.Button btn_Email;
