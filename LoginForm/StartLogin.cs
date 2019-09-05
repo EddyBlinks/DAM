@@ -51,8 +51,8 @@ namespace LoginForm
         {
             textBoxFirstName.Text = string.Empty;
             textBoxLastName.Text = string.Empty;
-            textBoxUsername.Text = string.Empty;
-            textBoxPassword.Text = string.Empty;
+            textBoxUsernameSignUp.Text = string.Empty;
+            textBoxPasswordSignUp.Text = string.Empty;
 
         }
         #endregion
