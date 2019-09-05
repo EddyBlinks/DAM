@@ -1,4 +1,4 @@
-# DAM
+# WindowsForm Desktop Application.
 Personal Project in C# windows Forms and MS SQL Database.
 This Project is a personal Project exploring how to connect a C# WindowForms Desktop Application with an MS SQL Database.
 The Application is Car Rental Service. It permits users to create accounts of which user accounts particulars will be stored in an 
